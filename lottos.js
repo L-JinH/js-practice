@@ -31,12 +31,12 @@ const win_nums = [1, 2, 3, 4, 5, 6];
 const lottos = [1, 3, 0, 0, 7, 0];
 // 일치: 1, 3 = 2개 최저: 5등
 // 2 + 0개수 3 = 5 최고: 2등
-
+/* 
 // 0 숫자
 const zeroCount = lottos.filter((zero) => zero === 0).length; // 3개
 
 //일치 숫자
-const correspondNum = win_nums.filter((num) => lottos.includes(num)).length; // 2개
+const correspondNum = lottos.filter((num) => win_nums.includes(num)).length; // 2개
 
 const maxNum = correspondNum + zeroCount;
 const minNum = correspondNum;
@@ -47,7 +47,28 @@ const ab = [];
 
 ab.push(maxNum, minNum);
 
-console.log(ab);
+const rank = [6, 6, 5, 4, 3, 2, 1];
+
+console.log(`최고순위:${rank[maxNum]}`, `최저순위:${rank[minNum]}`);
+*/
+
+/* 답안
+function solution(lottos, win_nums) {
+    
+    const rank = [6,6,5,4,3,2,1];
+    let min = lottos.filter(lot => win_nums.includes(lot)).length;  //2
+    let max = lottos.filter(lot => !lot).length;  //2
+    
+    const maxCount = min+max;  // 4
+    
+    return [rank[maxCount],rank[min]];
+    
+
+}
+*/
+
+/* 
+switch 이용
 
 switch (maxNum) {
     case 6:
@@ -108,5 +129,18 @@ switch (minNum) {
         console.log("최저순위: 6등");
         break;
 }
+*/
+//switch를 쓰면 funtion으로 쓰기엔 너무 길고 힘들어서 array를 쓰기로 함.
 
-//정리하기.
+/* 내 답 */
+function solution(lottos, win_nums) {
+    const rank = [6, 6, 5, 4, 3, 2, 1];
+
+    const zeroCount = lottos.filter((zero) => zero === 0).length;
+    // let zeroCount = lottos.filter(lot => !lot).length; : !0 =true
+    const minNum = lottos.filter((num) => win_nums.includes(num)).length;
+
+    const maxNum = minNum + zeroCount;
+
+    return [rank[maxNum], rank[minNum]];
+}
