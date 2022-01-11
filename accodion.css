@@ -1,0 +1,63 @@
+
+/* font 설정, margin 초기화, 배경색 넣기. */
+
+html, body {
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0;
+        background-color: #f0f0f0;
+}
+
+/* 전체 width 설정, 가운데 정렬 */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* margin-bottom으로 질문 사이 조정, 질문 영역 배경색 */
+
+.panel-question {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+/* 
+질문 머리 영역(첫째 손주) 글씨 bold, 
+질문의 머리와 몸통(둘째 손주) 여백 주기, 
+머리에만 배경색 다르게 하기, 글자색 변경, 커서 변경
+*/
+
+.panel-heading {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 몸통(둘째 손주) 여백 주기. */
+
+.panel-body {
+    padding: 15px;
+}
+
+/* 
+부모요소 첫째 btn 밑에 margin을 줘서 둘째 h2와 간격 벌리기.
+배경색 바꾸기.
+원래있던 border 없애기.
+글자색 및 커서 변경.
+여백주기.
+  float: right;로 h2 옆에 두기.
+ */
+
+#btn-collapse {
+  margin-bottom: 10px;
+  background-color: #999;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+}
+

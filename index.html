@@ -4,10 +4,53 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="stylesheet" href="accodion.css">
+        <title>accodion</title>
     </head>
     <body>
-        <!-- <script defer src="lottos.js"></script> -->
-        <script defer src="new-id.js"></script>
+        <div class="container">
+
+            <!-- 
+                point
+                .panel-heading을 clik하면 그 부모 요소에 class="active"가 들어가고 아닌 곳을 빼야함.
+            -->
+
+            <button id="btn-collapse">Collapse All</button>
+            <h2>FAQ</h2>
+            <section id="faq">
+              <div class="panel-question active">
+                <div class="panel-heading">
+                  + Lorem ipsum dolor sit?
+                </div>
+                <div class="panel-body" id="thisone">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aliquid voluptate fugit quaerat non molestiae quo magni soluta minima corporis! Soluta, ipsa et.</p>
+                  <p>Quos quibusdam, nesciunt totam ullam quasi neque!</p>
+                </div>
+              </div>
+              <!-- active class가 있어서 처음부터 열려있음. -->
+
+              <div class="panel-question">
+                <div class="panel-heading">
+                  + Lorem ipsum dolor sit?
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aliquid voluptate fugit quaerat non molestiae quo magni soluta minima corporis! Soluta, ipsa et.</p>
+                  <p>Quos quibusdam, nesciunt totam ullam quasi neque!</p>
+                </div>
+              </div>
+              
+              <div class="panel-question">
+                <div class="panel-heading">
+                  + Lorem ipsum dolor sit?
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aliquid voluptate fugit quaerat non molestiae quo magni soluta minima corporis! Soluta, ipsa et.</p>
+                  <p>Quos quibusdam, nesciunt totam ullam quasi neque!</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+        <script defer src="accodion.js"></script>
     </body>
 </html>
