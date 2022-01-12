@@ -1,24 +1,25 @@
-
 /* font 설정, margin 초기화, 배경색 넣기. */
 
-html, body {
-        font-family: Helvetica, Arial, sans-serif;
-        margin: 0;
-        background-color: #f0f0f0;
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 /* 전체 width 설정, 가운데 정렬 */
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 2rem;
 }
 
 /* margin-bottom으로 질문 사이 조정, 질문 영역 배경색 */
 
 .panel-question {
-    margin-bottom: 20px;
-    background-color: #fff;
+  margin-bottom: 20px;
+  background-color: #fff;
 }
 
 /* 
@@ -28,18 +29,17 @@ html, body {
 */
 
 .panel-heading {
-    font-weight: bold;
-    padding: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
-
 
 /* 몸통(둘째 손주) 여백 주기. */
 
 .panel-body {
-    padding: 15px;
+  padding: 15px;
 }
 
 /* 
@@ -60,4 +60,3 @@ html, body {
   padding: 5px;
   float: right;
 }
-
