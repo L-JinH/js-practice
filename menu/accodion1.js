@@ -1,4 +1,4 @@
-const btn = document.getElementsByClassName("btn");
+const allBtn = document.querySelector(".btn");
 const qestions = document.getElementsByClassName("qestions");
 const header = document.getElementsByClassName("header");
 const body = document.getElementsByClassName("body");
@@ -27,8 +27,16 @@ function accodion() {
 
 accodion();
 
-// btn.addEventListener("click", function () {
-//   for (let q = 0; q < body.length; q++) {
-//     body[q].style.display = "none";
-//   }
-// });
+allBtn.addEventListener("click", function () {
+  for (let z = 0; z < body.length; z++) {
+    body[z].style.display = "none";
+  }
+});
+
+/* 
+const allBtn = document.getElementsByClassName(".btn");
+=> const allBtn = document.querySelector(".btn");
+
+getElementsByClassName는 nodelist를 가져와서.
+
+*/
