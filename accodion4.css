@@ -1,0 +1,76 @@
+body {
+  background-color: rgb(252, 244, 231);
+  /* margin: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: dimgrey;
+}
+
+button {
+  background-color: gray;
+  border: none;
+  color: white;
+  width: 50px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#menu_btn {
+  float: right;
+}
+
+.main_menu {
+  background-color: white;
+  width: 20%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.main_menu > li {
+  margin: 10px;
+}
+
+.main_menu > li a {
+  font-weight: bold;
+}
+
+.main_menu > li > a {
+  color: cadetblue;
+  font-size: 1.5rem;
+}
+
+.main_menu > li:hover > a {
+  color: tomato;
+}
+
+.sub_menu {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+
+  max-height: 0;
+}
+
+.sub_menu > li:hover > a {
+  color: yellowgreen;
+}
+
+.sub_menu.active {
+  max-height: 86.4px;
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  background: green;
+  overflow-y: scroll;
+  /* right에 scroll이 생김. */
+  padding-top: 70px;
+}
+
+header {
+  margin-top: 20px;
+  background: linear-gradient(
+    white 50px,
+    rgba(255, 255, 255, 0.5) 50px,
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  /* nav 세로 길이 */
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+}
+
+nav > ul > li {
+  float: left;
+  line-height: 50px;
+  /* 중앙 정렬 */
+  /* margin-right: 70px; : a가 있다면 padding을 양옆에 35씩 줘서 빼야 됨. */
+  padding: 0 35px;
+  position: relative;
+  /* 기준점 */
+}
+
+/*
+a가 있다면
+nav > ul > li a {
+  display: block;
+  :공간을 다쓰게 만들기. 
+  padding: 0 35px;
+}
+*/
+nav > ul > li ul {
+  width: 100%;
+  display: none;
+  position: absolute;
+  /* position: absolute;를 주지 않으면 자식요소 너비만큼 늘어나서 간격이 일정하지 않음. */
+}
+
+nav > ul > li ul li {
+  white-space: nowrap;
+}
+
+nav > ul > li:hover ul {
+  display: block;
+}
