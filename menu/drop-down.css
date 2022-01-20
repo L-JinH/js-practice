@@ -28,7 +28,7 @@ header {
     rgba(255, 255, 255, 0.5)
   );
   height: 50px;
-  /* nav 세로 길이 */
+  /* = nav 세로 길이 */
   overflow: hidden;
   transition: height 0.4s ease-in-out;
   position: absolute;
